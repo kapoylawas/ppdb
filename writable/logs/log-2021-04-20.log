@@ -1,0 +1,50 @@
+CRITICAL - 2021-04-20 12:33:31 --> Class 'App\Controllers\ModelPendidikan' not found
+#0 D:\Ampps\www\ppdb\system\CodeIgniter.php(908): App\Controllers\Pendidikan->__construct()
+#1 D:\Ampps\www\ppdb\system\CodeIgniter.php(422): CodeIgniter\CodeIgniter->createController()
+#2 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-04-20 12:34:40 --> Undefined variable: pekerjaan
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_pendidikan.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Ampps\\www\\pp...', 55, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_pendidi...', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\Pendidikan.php(23): view('admin/v_pendidi...', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\Pendidikan->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendidikan))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-20 12:35:15 --> Undefined index: id_pekerjaan
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_pendidikan.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 60, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_pendidi...', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\Pendidikan.php(23): view('admin/v_pendidi...', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\Pendidikan->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendidikan))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-20 12:36:44 --> Undefined index: id_pekerjaan
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_pendidikan.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 60, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_pendidi...', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\Pendidikan.php(23): view('admin/v_pendidi...', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\Pendidikan->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendidikan))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-20 12:37:04 --> Undefined variable: pekerjaan
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_pendidikan.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Ampps\\www\\pp...', 103, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_pendidi...', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\Pendidikan.php(23): view('admin/v_pendidi...', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\Pendidikan->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pendidikan))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}

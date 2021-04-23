@@ -1,0 +1,190 @@
+CRITICAL - 2021-04-22 08:40:20 --> Undefined property: App\Controllers\User::$ModelUser
+#0 D:\Ampps\www\ppdb\app\Controllers\User.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Ampps\\www\\pp...', 21, Array)
+#1 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#2 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-04-22 08:41:17 --> Undefined property: App\Controllers\User::$ModelUser
+#0 D:\Ampps\www\ppdb\app\Controllers\User.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Ampps\\www\\pp...', 21, Array)
+#1 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#2 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-04-22 08:41:22 --> Undefined property: App\Controllers\User::$ModelUser
+#0 D:\Ampps\www\ppdb\app\Controllers\User.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\Ampps\\www\\pp...', 21, Array)
+#1 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#2 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-04-22 10:38:53 --> Call to undefined method App\Controllers\User::getFiles()
+#0 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->insertData()
+#1 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-04-22 10:40:05 --> Call to undefined method App\Controllers\User::getFile()
+#0 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->insertData()
+#1 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2021-04-22 10:58:20 --> mysqli_sql_exception: Unknown column 'user' in 'field list' in D:\Ampps\www\ppdb\system\Database\MySQLi\Connection.php:314
+Stack trace:
+#0 D:\Ampps\www\ppdb\system\Database\MySQLi\Connection.php(314): mysqli->query('UPDATE `tbl_use...')
+#1 D:\Ampps\www\ppdb\system\Database\BaseConnection.php(713): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_use...')
+#2 D:\Ampps\www\ppdb\system\Database\BaseConnection.php(641): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_use...')
+#3 D:\Ampps\www\ppdb\system\Database\BaseBuilder.php(2468): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_use...', Array, false)
+#4 D:\Ampps\www\ppdb\app\Models\ModelUser.php(26): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\Ampps\www\ppdb\app\Controllers\User.php(50): App\Models\ModelUser->editData(Array)
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->editData('3')
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-04-22 10:58:20 --> Unknown column 'user' in 'field list'
+#0 D:\Ampps\www\ppdb\system\Database\MySQLi\Connection.php(314): mysqli->query('UPDATE `tbl_use...')
+#1 D:\Ampps\www\ppdb\system\Database\BaseConnection.php(713): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_use...')
+#2 D:\Ampps\www\ppdb\system\Database\BaseConnection.php(641): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_use...')
+#3 D:\Ampps\www\ppdb\system\Database\BaseBuilder.php(2468): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_use...', Array, false)
+#4 D:\Ampps\www\ppdb\app\Models\ModelUser.php(26): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\Ampps\www\ppdb\app\Controllers\User.php(50): App\Models\ModelUser->editData(Array)
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->editData('3')
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-04-22 11:29:57 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:22 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:23 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:24 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:24 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:24 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:25 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:25 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:26 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:26 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:27 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-22 11:32:27 --> Undefined index: user
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_user.php(176): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\Ampps\\www\\pp...', 176, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_user', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\User.php(23): view('admin/v_user', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}

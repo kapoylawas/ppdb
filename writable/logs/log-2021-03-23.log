@@ -1,0 +1,12 @@
+CRITICAL - 2021-03-23 09:13:29 --> Use of undefined constant Y - assumed 'Y' (this will throw an Error in a future version of PHP)
+#0 D:\Ampps\www\ppdb\app\Views\template\template-frontend.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'D:\\Ampps\\www\\pp...', 99, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\View\View.php(236): CodeIgniter\View\View->render('template/templa...', Array, true)
+#4 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('v_home', Array, true)
+#5 D:\Ampps\www\ppdb\app\Controllers\Home.php(12): view('v_home', Array)
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\Home->index()
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#10 {main}

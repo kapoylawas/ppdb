@@ -1,0 +1,19 @@
+CRITICAL - 2021-04-19 07:28:03 --> Undefined variable: pekerjaa
+#0 D:\Ampps\www\ppdb\app\Views\admin\v_pekerjaan.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\Ampps\\www\\pp...', 87, Array)
+#1 D:\Ampps\www\ppdb\system\View\View.php(220): include('D:\\Ampps\\www\\pp...')
+#2 D:\Ampps\www\ppdb\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Ampps\www\ppdb\system\Common.php(1217): CodeIgniter\View\View->render('admin/v_pekerja...', Array, true)
+#4 D:\Ampps\www\ppdb\app\Controllers\Pekerjaan.php(23): view('admin/v_pekerja...', Array)
+#5 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\Pekerjaan->index()
+#6 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pekerjaan))
+#7 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-04-19 07:39:49 --> Illegal string offset 'id_pekerjaan'
+#0 D:\Ampps\www\ppdb\app\Models\ModelPekerjaan.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'D:\\Ampps\\www\\pp...', 26, Array)
+#1 D:\Ampps\www\ppdb\app\Controllers\Pekerjaan.php(41): App\Models\ModelPekerjaan->editData('1', Array)
+#2 D:\Ampps\www\ppdb\system\CodeIgniter.php(936): App\Controllers\Pekerjaan->editData('1')
+#3 D:\Ampps\www\ppdb\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pekerjaan))
+#4 D:\Ampps\www\ppdb\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Ampps\www\ppdb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
