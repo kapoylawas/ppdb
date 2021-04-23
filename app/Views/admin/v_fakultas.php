@@ -59,7 +59,10 @@
                 <?php echo form_open('fakultas/add'); ?>
                     <div class="form-group">
                       <label>Fakultas</label>
-                      <input name="fakultas" class="form-control" placeholder="Fakultas" required>
+                      <input name="fakultas" class="form-control" placeholder="Fakultas">
+                       <div class="invalid-feedback errorNama">
+             
+                      </div>
                     </div>
               </div>
               <div class="modal-footer">

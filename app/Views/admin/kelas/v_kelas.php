@@ -21,7 +21,6 @@
          </ul>
         </div> 
       <?php } ?>
-
               <?php 
                 if (session()->getFlashdata('pesan')) {
                   echo '<div class="alert alert-success" role="alert">';
@@ -92,7 +91,7 @@
                     </div>
                     <div class="form-group">
                       <label>Progam Studi</label>
-                      <select name="id_prodi" class="form-control">
+                      <select name="id_prodi" class="form-control select2" style="width: 100%;">
                         <option value="">--Pilih Progam Studi--</option>
                         <?php foreach ($prodi as $key => $value) { ?>
                             <option value="<?= $value['id_prodi'] ?>"><?= $value['prodi'] ?></option>
@@ -101,7 +100,7 @@
                     </div>
                     <div class="form-group">
                       <label>Dosen PA</label>
-                      <select name="id_dosen" class="form-control">
+                      <select name="id_dosen" class="form-control select2" style="width:100%;">
                         <option value="">--Pilih Dosen PA--</option>
                         <?php foreach ($dosen as $key => $value) { ?>
                             <option value="<?= $value['id_dosen'] ?>"><?= $value['nama_dosen'] ?></option>
@@ -110,7 +109,7 @@
                     </div>
                     <div class="form-group">
                       <label>Tahun Angkatan</label>
-                      <select name="tahun_angkatan" class="form-control">
+                      <select name="tahun_angkatan" class="form-control select2" style="width:100%;">
                         <option value="">--Pilih Tahun--</option>
                         <?php for ($i = date('Y'); $i >= date('Y')-5; $i--) { ?>
                             <option value="<?= $i ?>"><?= $i ?></option>

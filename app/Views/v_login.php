@@ -41,7 +41,7 @@
       </div>
       <div class="form-group has-feedback">
         <select name="level" class="form-control">
-            <option value="">--Pilih Hak Akses--</option>
+            <option  value="">--Pilih Hak Akses--</option>
             <option value="1">Admin</option>
             <option value="2">Mahasiswa</option>
             <option value="3">Dosen</option>

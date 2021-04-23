@@ -204,8 +204,8 @@
             </div>
             <!-- /.modal-content -->
           </div>
-          <!-- /.modal-dialog -->
-      </div>
+       <!-- /.modal-dialog -->
+    </div>
   
 <!-- modal delete -->
 <?php foreach ($jadwal as $key => $value) { ?>

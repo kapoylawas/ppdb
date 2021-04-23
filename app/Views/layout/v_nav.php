@@ -32,7 +32,7 @@
               </ul>
             </li>
             <!-- <li><a href="#">About</a></li> -->
-          <?php }elseif (session()->get('level') == 2) { ?>
+        <?php }elseif (session()->get('level') == 2) { ?>
           <!-- menu mahasiswa -->
             <li class=""><a href="<?= base_url('mhs') ?>">Dashboard</a></li>
             <li class="dropdown">

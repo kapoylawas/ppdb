@@ -2,7 +2,7 @@
     <div class="col-sm-3">
     </div>
     <div class="col-sm-6">
-    <div class="box box-danger box-solid">
+    <div class="box box-success box-solid">
             <div class="box-header with-border">
               <h3 class="box-title"><?= $title ?></h3>
               <div class="box-tools pull-right">
@@ -12,10 +12,21 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+    <?php 
+        $errors = session()->getFlashdata('errors');
+        if (!empty($errors)) { ?>
+        <div class="alert alert-danger alert-dismissible">
+          <ul>
+          <?php foreach ($errors as $key => $value) { ?>
+              <li> <?= esc($value) ?> </li>
+         <?php } ?>
+         </ul>
+        </div> 
+      <?php } ?>
 
      
     <?php echo form_open_multipart('dosen/insert'); ?>
-            
+     
         <!-- <div class="col-sm-6"> -->
            <div class="form-group">
              <label>Kode Dosen</label>

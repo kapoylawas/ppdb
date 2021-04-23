@@ -179,7 +179,6 @@ class Dosen extends BaseController
 			$foto->move('foto_dosen', $nama_file);
 			$this->Model_dosen->edit($data);
 			}
-
 			session()->setFlashdata('pesan', 'Data Berhasil di Update');
 			return redirect()->to(base_url('dosen'));
         }else {
