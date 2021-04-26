@@ -1,10 +1,10 @@
 <?= $this->extend('template/template-backend') ?>
 <?= $this->section('content') ?>
 
-<div class="col-sm-12">
+<div class="col-sm-9">
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">Tabel Master User</h3>
+    <h3 class="card-title">Tabel Master Penghasilan</h3>
 
     <div class="card-tools">
         <div class="input-group input-group-sm" data-toggle="modal" data-target="#add" style="width: 100px;">
@@ -42,26 +42,22 @@
       echo '</h5></div>';
     }
  ?>
-      <table id="example1" class="table table-bordered table-striped">
+      <table class="table table-sm">
         <thead>
             <tr>
               <th width="70px">No</th>
-              <th>Nama User</th>
-              <th>E-mail</th>
-              <th>Foto</th>
+              <th>Penghasilan</th>
               <th class="text-center" width="100px">Action</th>
             </tr>
         </thead>
         <tbody>
-          <?php $no=1; foreach ($user as $key => $value) { ?>
+          <?php $no=1; foreach ($penghasilan as $key => $value) { ?>
               <tr>
                <td><?= $no++ ?></td>
-               <td><?= $value['nama_user'] ?></td>
-               <td><?= $value['email'] ?></td>
-               <td class="text-center"><img class="img-circle img-fluid" src="<?= base_url('foto/' . $value['foto']) ?>" width="50px"></td>
+               <td><?= $value['penghasilan'] ?></td>
                <td>
-                    <button class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#delete<?= $value['id_user'] ?>"><i class="fas fa-trash"></i></button>
-                    <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#edit<?= $value['id_user'] ?>"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#delete<?= $value['id_penghasilan'] ?>"><i class="fas fa-trash"></i></button>
+                    <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#edit<?= $value['id_penghasilan'] ?>"><i class="fas fa-edit"></i></button>
                </td>
               </tr>
           <?php } ?> 
@@ -69,35 +65,24 @@
     </table>
  </div>
 </div>
+</div>  
 
 <!-- modal tambah -->
 <div class="modal fade" id="add">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Add User</h4>
+              <h4 class="modal-title">Add penghasilan</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
 
-            <?php echo form_open_multipart('user/insertData') ?>
+            <?php echo form_open('penghasilan/insertData') ?>
             <div class="modal-body">
                <div class="form-group">
-                    <label>Nama User</label>
-                    <input type="text" name="nama_user" class="form-control" placeholder="Nama User" required>
-                 </div>
-               <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="E-mail" required>
-                 </div>
-               <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Password" required>
-                 </div>
-               <div class="form-group">
-                    <label>Foto</label>
-                    <input type="file" name="foto" class="form-control" accept="image/*" placeholder="Foto" required>
+                    <label>penghasilan</label>
+                    <input type="text" name="penghasilan" class="form-control" placeholder="Ex: Rp.0 - Rp.500.000" required>
                  </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -114,36 +99,22 @@
 <!-- /.modal -->
 
 <!-- modal edit -->
-<?php foreach ($user as $key => $value) { ?>
-<div class="modal fade" id="edit<?= $value['id_user'] ?>">
+<?php foreach ($penghasilan as $key => $value) { ?>
+<div class="modal fade" id="edit<?= $value['id_penghasilan'] ?>">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Edit User</h4>
+              <h4 class="modal-title">Edit penghasilan</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
 
-            <?php echo form_open_multipart('user/editData/'. $value['id_user']) ?>
+            <?php echo form_open('penghasilan/editData/'. $value['id_penghasilan']) ?>
             <div class="modal-body">
                <div class="form-group">
-                    <label>Nama User</label>
-                    <input type="text" value="<?= $value['nama_user'] ?>" name="nama_user" class="form-control" placeholder="Nama User" required>
-                 </div>
-               <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" value="<?= $value['email'] ?>" name="email" class="form-control" placeholder="E-mail" required>
-                 </div>
-               <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" value="<?= $value['password'] ?>" name="password" class="form-control" placeholder="Password" required>
-                 </div>
-               <div class="form-group">
-                    <label>Foto</label>
-                    <input type="file" name="foto" class="form-control" accept="image/*" placeholder="Foto">
-                    <br>
-                    <img src="<?= base_url('foto/' . $value['foto']) ?>" width="50px">
+                    <label>penghasilan</label>
+                    <input type="text" name="penghasilan" value="<?= $value['penghasilan'] ?>" class="form-control" placeholder="penghasilan" required>
                  </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -161,8 +132,8 @@
 <!-- /.modal -->
 
 <!-- modal delete -->
-<?php foreach ($user as $key => $value) { ?>
-<div class="modal fade" id="delete<?= $value['id_user'] ?>">
+<?php foreach ($penghasilan as $key => $value) { ?>
+<div class="modal fade" id="delete<?= $value['id_penghasilan'] ?>">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -173,12 +144,13 @@
             </div>
 
             <div class="modal-body">
-               Apakah Anda Ingin Menghapus Data User <b class="btn btn-danger btn-sm"><?= $value['nama_user'] ?></b>
+               Apakah Anda Ingin Menghapus Data <b class="btn btn-danger btn-sm"><?= $value['penghasilan'] ?></b>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
-              <a href="<?= base_url('user/deleteData/'. $value['id_user']) ?>" class="btn btn-danger btn-sm">Delete</a>
+              <a href="<?= base_url('penghasilan/deleteData/'. $value['id_penghasilan']) ?>" class="btn btn-danger btn-sm">Delete</a>
             </div>
+
           </div>
           <!-- /.modal-content -->
         </div>

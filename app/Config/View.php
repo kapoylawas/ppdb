@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 namespace Config;
@@ -6,11 +5,6 @@ namespace Config;
 use CodeIgniter\Config\View as BaseView;
 
 class View extends BaseView
-=======
-<?php namespace Config;
-
-class View extends \CodeIgniter\Config\View
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 {
 	/**
 	 * When false, the view method will clear the data between each
@@ -19,11 +13,8 @@ class View extends \CodeIgniter\Config\View
 	 * to each view. You might prefer to have the data stick around between
 	 * calls so that it is available to all views. If that is the case,
 	 * set $saveData to true.
-<<<<<<< HEAD
 	 *
 	 * @var boolean
-=======
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 	 */
 	public $saveData = true;
 
@@ -37,11 +28,8 @@ class View extends \CodeIgniter\Config\View
 	 * Examples:
 	 *  { title|esc(js) }
 	 *  { created_on|date(Y-m-d)|esc(attr) }
-<<<<<<< HEAD
 	 *
 	 * @var array
-=======
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 	 */
 	public $filters = [];
 
@@ -49,11 +37,8 @@ class View extends \CodeIgniter\Config\View
 	 * Parser Plugins provide a way to extend the functionality provided
 	 * by the core Parser by creating aliases that will be replaced with
 	 * any callable. Can be single or tag pair.
-<<<<<<< HEAD
 	 *
 	 * @var array
-=======
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 	 */
 	public $plugins = [];
 }

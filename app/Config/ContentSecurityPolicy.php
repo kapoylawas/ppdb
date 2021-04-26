@@ -1,25 +1,15 @@
-<<<<<<< HEAD
 <?php
 
 namespace Config;
-=======
-<?php namespace Config;
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 
 use CodeIgniter\Config\BaseConfig;
 
 /**
-<<<<<<< HEAD
-=======
- * Class ContentSecurityPolicyConfig
- *
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
  * Stores the default settings for the ContentSecurityPolicy, if you
  * choose to use it. The values here will be read in and set as defaults
  * for the site. If needed, they can be overridden on a page-by-page basis.
  *
  * Suggested reference for explanations:
-<<<<<<< HEAD
  *
  * @see https://www.html5rocks.com/en/tutorials/security/content-security-policy/
  */
@@ -166,41 +156,4 @@ class ContentSecurityPolicy extends BaseConfig
 	 * @var string|string[]|null
 	 */
 	public $sandbox = null;
-=======
- *    https://www.html5rocks.com/en/tutorials/security/content-security-policy/
- *
- * @package Config
- */
-class ContentSecurityPolicy extends BaseConfig
-{
-	// broadbrush CSP management
-
-	public $reportOnly              = false; // default CSP report context
-	public $reportURI               = null; // URL to send violation reports to
-	public $upgradeInsecureRequests = false; // toggle for forcing https
-
-	// sources allowed; string or array of strings
-	// Note: once you set a policy to 'none', it cannot be further restricted
-
-	public $defaultSrc     = null; // will default to self if not over-ridden
-	public $scriptSrc      = 'self';
-	public $styleSrc       = 'self';
-	public $imageSrc       = 'self';
-	public $baseURI        = null;    // will default to self if not over-ridden
-	public $childSrc       = 'self';
-	public $connectSrc     = 'self';
-	public $fontSrc        = null;
-	public $formAction     = 'self';
-	public $frameAncestors = null;
-	public $mediaSrc       = null;
-	public $objectSrc      = 'self';
-	public $manifestSrc    = null;
-
-	// mime types allowed; string or array of strings
-	public $pluginTypes = null;
-
-	// list of actions allowed; string or array of strings
-	public $sandbox = null;
-
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 }

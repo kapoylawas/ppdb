@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?= $this->extend('template/template-frontend') ?>
 <?= $this->section('content') ?>
 
@@ -45,19 +44,3 @@
 
 
 <?= $this->endSection() ?>
-=======
-<div class="row">
-<div class="col-sm-12">
-
-    <div class="text-center ">
-        <h1><b>Selamat Datang</b></h1>
-    </div>
-</div>
-
-<div class="col-sm-12 ">
-<div class="text-center">
-    <img class="img-responsive pad" src="<?= base_url('gambar/about.svg') ?>" width="800px" alt="Photo">     
-</div> 
-</div> 
-</div>
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b

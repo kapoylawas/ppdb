@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 <?php
 
 namespace Config;
-=======
-<?php namespace Config;
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 
 use CodeIgniter\Config\BaseConfig;
 
 class Honeypot extends BaseConfig
 {
-<<<<<<< HEAD
-=======
-
->>>>>>> 9111f84c46bc730ffb4db5942aa61e6545f2194b
 	/**
 	 * Makes Honeypot visible or not to human
 	 *
