@@ -20,7 +20,7 @@ class Agama extends BaseController
 			'subtitle' => 'Agama',
 			'agama' => $this->ModelAgama->getAllData(),
 		];
-		return view('admin/v_agama', $data);
+		return view('admin/agama/v_agama', $data);
 	}
 
 	public function insertData()

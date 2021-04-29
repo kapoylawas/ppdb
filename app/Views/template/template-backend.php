@@ -21,6 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -134,7 +135,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
           </li>
+            
         </ul>
+         <li class="nav-item">
+                  <a href="<?= base_url('admin/setting') ?>" class="nav-link">
+                    <i class="nav-icon fas fa-cog"></i>
+                    <p> Setting </p>
+                  </a>
+            </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -228,6 +236,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script src="<?= base_url() ?>/template/dist/js/demo.js"></script>
+<script src="<?= base_url() ?>/template/plugins/sweetalert2/sweetalert2.min.js"></script>
 </body>
 <script>
     window.setTimeout(function(){
@@ -252,6 +261,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
       "autoWidth": false,
       "responsive": true,
     });
+  });
+</script>
+
+<script>
+  function bacaGambar(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#gambar_load').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files [0]);
+    }
+  }
+
+  $('#preview_gambar').change(function() {
+     bacaGambar(this);
+  });
+</script>
+
+<script>
+  $(function() {
+    var Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 10000
+    });
+
+    $('.swalDefaultSuccess').click(function() {
+      Toast.fire({
+        icon: 'success',
+        title: 'data berhasil di hapus'
+      })
+    });
+   
   });
 </script>
 </body>

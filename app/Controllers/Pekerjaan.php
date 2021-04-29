@@ -20,7 +20,7 @@ class Pekerjaan extends BaseController
 			'subtitle' => 'Pekerjaan',
 			'pekerjaan' => $this->ModelPekerjaan->getAllData(),
 		];
-		return view('admin/v_pekerjaan', $data);
+		return view('admin/pekerjaan/v_pekerjaan', $data);
 	}
 
 	public function insertData()

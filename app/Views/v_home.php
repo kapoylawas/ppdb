@@ -2,9 +2,9 @@
 <?= $this->section('content') ?>
 
 <!-- /.col -->
-  <div class="col-md-8">  
+  <div class="col-sm-8">  
               <!-- /.card-header -->
-              <div class="card-body">
+              
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -13,13 +13,13 @@
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100" height="400px" src="<?= base_url('ppdb/ppdb6.jpg') ?>" alt="First slide">
+                      <img class="d-block w-100" height="350px" src="<?= base_url('ppdb/ppdb6.jpg') ?>" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" height="400px" src="<?= base_url('ppdb/ppdb2.jpg') ?>" alt="Second slide">
+                      <img class="d-block w-100" height="350px" src="<?= base_url('ppdb/ppdb2.jpg') ?>" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" height="400px" src="<?= base_url('ppdb/ppdb3.jpg') ?>" alt="Third slide">
+                      <img class="d-block w-100" height="350px" src="<?= base_url('ppdb/ppdb3.jpg') ?>" alt="Third slide">
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -34,13 +34,73 @@
                     </span>
                     <span class="sr-only">Next</span>
                   </a>
-                </div>
-              </div>
-              <!-- /.card-body -->
+                
             </div>
             <!-- /.card -->
    </div>
 <!-- /.col -->
+
+
+
+<div class="col-md-4">
+            <!-- The time line -->
+            <div class="timeline">
+              <!-- timeline time label -->
+              <div class="time-label">
+                <span class="bg-red">Estimasi Pendaftaran</span>
+              </div>
+              <!-- /.timeline-label -->
+              <!-- timeline item -->
+              <div>
+                <i class="fas fa-user bg-blue"></i>
+                <div class="timeline-item">
+                  <!-- <span class="time"><i class="fas fa-clock"></i> 12:05</span> -->
+                  <h3 class="timeline-header"><a href="#">Jumlah Pendaftar :</a> 0 </h3>
+                </div>
+              </div>
+              <!-- END timeline item -->
+              <!-- timeline item -->
+              <div>
+                <i class="fas fa-user bg-green"></i>
+                <div class="timeline-item">
+                  <!-- <span class="time"><i class="fas fa-clock"></i> 5 mins ago</span> -->
+                  <h3 class="timeline-header no-border"><a href="#">Jumlah Laki-laki :</a> 0 </h3>
+                </div>
+              </div>
+              <!-- END timeline item -->
+              <!-- timeline item -->
+              <div>
+                <i class="fas fa-user bg-yellow"></i>
+                <div class="timeline-item">
+                  <!-- <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span> -->
+                  <h3 class="timeline-header"><a href="#">Jumlah Perempuan :</a> 0 </h3>
+                  
+                  <!-- <div class="timeline-footer">
+                    <a class="btn btn-warning btn-sm">View comment</a>
+                  </div> -->
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-file-alt bg-dark"></i>
+                <div class="timeline-item">
+                  <!-- <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span> -->
+                  <!-- <h3 class="timeline-header"><a href="#"></a> </h3> -->
+                  <div class="timeline-footer">
+                    <a href="" class="btn btn-primary btn-sm-3">Mendaftar</a>
+                  </div>
+                </div>
+              </div>
+              <!-- END timeline item -->
+              <div>
+                <i class="fas fa-clock bg-gray"></i>
+              </div>
+            </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
 
 
 <?= $this->endSection() ?>

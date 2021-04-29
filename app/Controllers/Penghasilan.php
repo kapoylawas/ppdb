@@ -20,7 +20,7 @@ class Penghasilan extends BaseController
 			'subtitle' => 'Penghasilan',
 			'penghasilan' => $this->ModelPenghasilan->getAllData(),
 		];
-		return view('admin/v_penghasilan', $data);
+		return view('admin/penghasilan/v_penghasilan', $data);
 	}
 
 	public function insertData()

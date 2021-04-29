@@ -20,7 +20,7 @@ class User extends BaseController
 			'subtitle' => 'User',
 			'user' => $this->ModelUser->getAllData(),
 		];
-		return view('admin/v_user', $data);
+		return view('admin/user/v_user', $data);
 	}
 
 	public function insertData()

@@ -20,7 +20,7 @@ class Pendidikan extends BaseController
 			'subtitle' => 'Pendidikan',
 			'pendidikan' => $this->ModelPendidikan->getAllData(),
 		];
-		return view('admin/v_pendidikan', $data);
+		return view('admin/pendidikan/v_pendidikan', $data);
 	}
 
 	public function insertData()
