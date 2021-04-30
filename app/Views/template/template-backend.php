@@ -94,6 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           
+          
           <li class="nav-item menu-open">
             <!-- <ul class="nav nav-treeview"> -->
               <li class="nav-item">
@@ -135,8 +136,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
           </li>
-            
         </ul>
+        <li class="nav-item">
+            <a href="<?= base_url('tahun_ajaran') ?>" class="nav-link">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p> Tahun Ajaran </p>
+            </a>
+          </li>
          <li class="nav-item">
                   <a href="<?= base_url('admin/setting') ?>" class="nav-link">
                     <i class="nav-icon fas fa-cog"></i>

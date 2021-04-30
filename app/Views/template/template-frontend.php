@@ -3,6 +3,10 @@
   $setting = $db->table('tbl_setting')
               ->where('id', '1')
               ->get()->getRowArray();
+
+  $ta = $db->table('tbl_ta')
+           ->where('status', '1')
+           ->get()->getRowArray();
 ?>
 <!DOCTYPE html>
 <!--
@@ -72,7 +76,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"> Tahun Ajaran 2020-2021</h1>
+          <?php if ($ta['status'] <> '1') { ?>
+            <div class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <h8><i class="icon fas fa-ban"></i> Pendaftaran Sudah di Tutup!</h8>
+                </div>
+          <?php }else { ?>
+            <h1 class="m-0"> Pendaftaran Tahun Ajaran <?= $ta['ta'] ?></h1>
+          <?php } ?>
+            
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
