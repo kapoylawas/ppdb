@@ -22,6 +22,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -243,6 +246,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url() ?>/template/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <script src="<?= base_url() ?>/template/dist/js/demo.js"></script>
 <script src="<?= base_url() ?>/template/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- Select2 -->
+<script src="<?= base_url() ?>/template/plugins/select2/js/select2.full.min.js"></script>
 </body>
 <script>
     window.setTimeout(function(){
@@ -304,5 +309,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
    
   });
 </script>
+
+<script>
+  $(function () {
+    $('.select2').select2()
+      //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+  })
+</script>
+
 </body>
 </html>

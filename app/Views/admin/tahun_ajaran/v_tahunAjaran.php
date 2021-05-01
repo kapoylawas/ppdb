@@ -97,10 +97,10 @@
             <div class="modal-body">
                <div class="form-group">
                     <label>Tahun</label>
-                    <select name="tahun" class="form-control">
+                    <select class="form-control select2bs4" style="width: 100%;">
                         <?php $now = date('Y');
                             for ($i=2018; $i <= $now ; $i++) { ?>
-                                <option value="<?= $i ?>" <?= ($now == $i) ? 'selected': '' ?>><?= $i ?></option>;
+                                <option selected="selected" value="<?= $i ?>" <?= ($now == $i) ? 'selected': '' ?>><?= $i ?></option>;
                             <?php } ?> 
                     </select>
                  </div>
@@ -138,7 +138,7 @@
             <div class="modal-body">
             <div class="form-group">
                     <label>Tahun</label>
-                    <select name="tahun" class="form-control">
+                    <select class="form-control select2bs4" style="width: 100%;">
                         <?php $now = date('Y');
                             for ($i=2018; $i <= $now ; $i++) { ?>
                                 <option value="<?= $i ?>" <?= ($i == $value['tahun']) ? 'selected': '' ?>><?= $i ?></option>;
