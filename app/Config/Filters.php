@@ -50,6 +50,8 @@ class Filters extends BaseConfig
 					'agama', 'agama/*',
 					'user', 'user/*',
 					'penghasilan', 'penghasilan/*',
+					'tahun_ajaran', 'tahun_ajaran/*',
+					'jurusan', 'jurusan/*',
 				]],
 			'toolbar',
 			// 'honeypot',

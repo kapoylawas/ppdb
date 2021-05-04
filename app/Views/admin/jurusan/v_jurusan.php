@@ -2,10 +2,9 @@
 <?= $this->section('content') ?>
 
 <div class="col-sm-9">
-
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title">Tabel Master Pegawai</h3>
+    <h3 class="card-title">Tabel Master Jurusan</h3>
 
     <div class="card-tools">
         <div class="input-group input-group-sm" data-toggle="modal" data-target="#add" style="width: 100px;">
@@ -47,21 +46,18 @@
         <thead>
             <tr>
               <th width="70px">No</th>
-              <th>Pekerjaan</th>
+              <th>Jurusan</th>
               <th class="text-center" width="100px">Action</th>
             </tr>
         </thead>
         <tbody>
-          <?php $no=1; foreach ($pekerjaan as $key => $value) { ?>
+          <?php $no=1; foreach ($jurusan as $key => $value) { ?>
               <tr>
                <td><?= $no++ ?></td>
-               <td><?= $value['pekerjaan'] ?></td>
+               <td><?= $value['jurusan'] ?></td>
                <td>
-                    <button class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#delete<?= $value['id_pekerjaan'] ?>"><i class="fas fa-trash"></i></button>
-                    <!-- <a href="<?= base_url('pekerjaan') ?>" type="button" class="btn btn-success swalDefaultSuccess"> </a> -->
-                 
-                </button>
-                    <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#edit<?= $value['id_pekerjaan'] ?>"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#delete<?= $value['id_jurusan'] ?>"><i class="fas fa-trash"></i></button>
+                    <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#edit<?= $value['id_jurusan'] ?>"><i class="fas fa-edit"></i></button>
                </td>
               </tr>
           <?php } ?> 
@@ -69,24 +65,24 @@
     </table>
  </div>
 </div>
-</div>  
 
 <!-- modal tambah -->
 <div class="modal fade" id="add">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Add Pekerjaan</h4>
+              <h4 class="modal-title">Add Jurusan</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
 
-            <?php echo form_open('pekerjaan/insertData') ?>
+            <?php echo form_open('jurusan/insertData') ?>
+            <?= csrf_field(); ?>
             <div class="modal-body">
                <div class="form-group">
-                    <label>Pekerjaan</label>
-                    <input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan" required>
+                    <label>jurusan</label>
+                    <input type="text" name="jurusan" class="form-control" placeholder="Jurusan" required>
                  </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -103,22 +99,22 @@
 <!-- /.modal -->
 
 <!-- modal edit -->
-<?php foreach ($pekerjaan as $key => $value) { ?>
-<div class="modal fade" id="edit<?= $value['id_pekerjaan'] ?>">
+<?php foreach ($jurusan as $key => $value) { ?>
+<div class="modal fade" id="edit<?= $value['id_jurusan'] ?>">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Edit Pekerjaan</h4>
+              <h4 class="modal-title">Edit Jurusan</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
 
-            <?php echo form_open('pekerjaan/editData/'. $value['id_pekerjaan']) ?>
+            <?php echo form_open('jurusan/editData/'. $value['id_jurusan']) ?>
             <div class="modal-body">
                <div class="form-group">
-                    <label>Pekerjaan</label>
-                    <input type="text" name="pekerjaan" value="<?= $value['pekerjaan'] ?>" class="form-control" placeholder="Pekerjaan" required>
+                    <label>Jurusan</label>
+                    <input type="text" name="jurusan" value="<?= $value['jurusan'] ?>" class="form-control" placeholder="jurusan" required>
                  </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -136,23 +132,23 @@
 <!-- /.modal -->
 
 <!-- modal delete -->
-<?php foreach ($pekerjaan as $key => $value) { ?>
-<div class="modal fade" id="delete<?= $value['id_pekerjaan'] ?>">
+<?php foreach ($jurusan as $key => $value) { ?>
+<div class="modal fade" id="delete<?= $value['id_jurusan'] ?>">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <!-- <h4 class="modal-title">Edit Pekerjaan</h4> -->
+  
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
 
             <div class="modal-body">
-               Apakah Anda Ingin Menghapus Data <b class="btn btn-danger btn-sm"><?= $value['pekerjaan'] ?></b>
+               Apakah Anda Ingin Menghapus Data <b class="btn btn-danger btn-sm"><?= $value['jurusan'] ?></b>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
-              <a href="<?= base_url('pekerjaan/deleteData/'. $value['id_pekerjaan']) ?>" class="btn btn-danger btn-sm swalDefaultSuccess">Delete</a>
+              <a href="<?= base_url('jurusan/deleteData/'. $value['id_jurusan']) ?>" class="btn btn-danger btn-sm">Delete</a>
             </div>
 
           </div>

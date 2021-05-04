@@ -138,6 +138,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p> Penghasilan </p>
                   </a>
                 </li>
+                  <li class="nav-item">
+                  <a href="<?= base_url('jurusan') ?>" class="nav-link">
+                    <i class="nav-icon fas fa-user-graduate"></i>
+                    <p> Jurusan </p>
+                  </a>
+                </li>
           </li>
         </ul>
         <li class="nav-item">
