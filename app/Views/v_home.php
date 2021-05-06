@@ -86,7 +86,7 @@
                   <!-- <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span> -->
                   <!-- <h3 class="timeline-header"><a href="#"></a> </h3> -->
                   <div class="timeline-footer">
-                    <a href="" class="btn btn-primary btn-sm-3">Mendaftar</a>
+                    <a href="<?= base_url('ppdb/pendaftaran') ?>" class="btn btn-primary btn-sm-3">Mendaftar</a>
                   </div>
                 </div>
               </div>

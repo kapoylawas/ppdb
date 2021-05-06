@@ -38,4 +38,12 @@ class ModelTahun_ajaran extends Model
 		$this->db->table('tbl_ta')
 			 ->update(['status' => 0]);
 	}
+
+	public function statusTa()
+	{
+		return $this->db->table('tbl_ta')
+		 ->where('status', '1')
+		 ->get()
+		 ->getRowArray();
+	}
 }
