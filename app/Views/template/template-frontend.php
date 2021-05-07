@@ -149,5 +149,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     })
   })
 </script>
+<script>
+    window.setTimeout(function(){
+      $('.alert').fadeTo(500,0).slideUp(500,function(){
+        $(this).remove();
+      });
+    },8000);
+</script>
 </body>
 </html>
