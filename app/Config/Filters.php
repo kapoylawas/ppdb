@@ -20,6 +20,7 @@ class Filters extends BaseConfig
 		'toolbar'  => DebugToolbar::class,
 		'honeypot' => Honeypot::class,
 		'FilterUser' => \App\Filters\FilterUser::class,
+		'FilterSiswa' => \App\Filters\FilterSiswa::class,
 	];
 
 	/**
@@ -34,7 +35,17 @@ class Filters extends BaseConfig
 				'except' => [
 					'auth', 'auth/*',
 					'home','home/*',
-					'/'
+					'/',
+					'ppdb', 'ppdb/*',
+					'pendaftaran', 'pendaftaran/*',
+				]],
+			'FilterSiswa' => [
+				'except' => [
+					'auth', 'auth/*',
+					'home','home/*',
+					'/',
+					'ppdb', 'ppdb/*',
+					'pendaftaran', 'pendaftaran/*',
 				]]
 			// 'honeypot',
 			// 'csrf',
@@ -44,6 +55,8 @@ class Filters extends BaseConfig
 				'except' => [
 					'home','home/*',
 					'/',
+					'ppdb', 'ppdb/*',
+					'pendaftaran', 'pendaftaran/*',
 					'admin', 'admin/*',
 					'pekerjaan', 'pekerjaan/*',
 					'pendidikan', 'pendidikan/*',
@@ -52,6 +65,14 @@ class Filters extends BaseConfig
 					'penghasilan', 'penghasilan/*',
 					'tahun_ajaran', 'tahun_ajaran/*',
 					'jurusan', 'jurusan/*',
+				]],
+			'FilterSiswa' => [
+				'except' => [
+					'home','home/*',
+					'/',
+					'ppdb', 'ppdb/*',
+					'pendaftaran', 'pendaftaran/*',
+					'siswa', 'siswa/*',
 				]],
 			'toolbar',
 			// 'honeypot',

@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\ModelTahun_ajaran;
 use App\Models\ModelSiswa;
 
-class Ppdb extends BaseController
+class Pendaftaran extends BaseController
 {
 	public function __construct()
 	{
@@ -14,8 +14,8 @@ class Ppdb extends BaseController
 		$this->ModelSiswa = new ModelSiswa();
 		helper('form', 'url');
 	}
-
-	public function pendaftaran()
+	
+	public function index()
 	{
 		$data = [
 			'title' => 'PPDB Online',
@@ -36,7 +36,7 @@ class Ppdb extends BaseController
 				'errors' => [
 					'required' => '{field} Wajib Diisi !',
 					'max_length' => '{field} Max 10 Karakter !',
-					'is_unique' => '{field} NISN Sudah Terdaftar !'
+					'is_unique' => '{field} Sudah Terdaftar !'
 				   ]
                 ],
 			'nama_lengkap' => [
@@ -44,7 +44,6 @@ class Ppdb extends BaseController
 				'rules' => 'required',
 				'errors' => [
 					'required' => '{field} Wajib Diisi !',
-					'is_unique' => '{field} Sudah ada Input Kode Lain !'
 				   ]
                 ],
 			'nama_panggilan' => [
@@ -52,7 +51,6 @@ class Ppdb extends BaseController
 				'rules' => 'required',
 				'errors' => [
 					'required' => '{field} Wajib Diisi !',
-					'is_unique' => '{field} Sudah ada Input Kode Lain !'
 				   ]
                 ],
 			'tempat_lahir' => [
@@ -60,7 +58,13 @@ class Ppdb extends BaseController
 				'rules' => 'required',
 				'errors' => [
 					'required' => '{field} Wajib Diisi !',
-					'is_unique' => '{field} Sudah ada Input Kode Lain !'
+				   ]
+                ],
+			'jk' => [
+				'label' => 'Jenis Kelamin',
+				'rules' => 'required',
+				'errors' => [
+					'required' => '{field} Wajib Diisi !',
 				   ]
                 ],
 			'tanggal' => [
@@ -68,7 +72,6 @@ class Ppdb extends BaseController
 				'rules' => 'required',
 				'errors' => [
 					'required' => '{field} Wajib Diisi !',
-					'is_unique' => '{field} Sudah ada Input Kode Lain !'
 				   ]
                 ],
 			'bulan' => [
@@ -76,7 +79,6 @@ class Ppdb extends BaseController
 				'rules' => 'required',
 				'errors' => [
 					'required' => '{field} Wajib Diisi !',
-					'is_unique' => '{field} Sudah ada Input Kode Lain !'
 				   ]
                 ],
 			'tahun' => [
@@ -84,7 +86,6 @@ class Ppdb extends BaseController
 				'rules' => 'required',
 				'errors' => [
 					'required' => '{field} Wajib Diisi !',
-					'is_unique' => '{field} Sudah ada Input Kode Lain !'
 				   ]
                 ],
 		 ])) {
@@ -99,16 +100,17 @@ class Ppdb extends BaseController
 				'nama_lengkap' => $this->request->getPost('nama_lengkap'),
 				'nama_panggilan' => $this->request->getPost('nama_panggilan'),
 				'tempat_lahir' => $this->request->getPost('tempat_lahir'),
+				'jk' => $this->request->getPost('jk'),
 				'tgl_lahir' => $tahun.'-'.$bulan.'-'.$tanggal,
 				'password' => $nisn,
 			];
 			$this->ModelSiswa->insertData($data);
 			session()->setFlashdata('pesan', 'Pendaftaran Berhasil, Silahkan Login Untuk Melengkapi Data!!');
-			return redirect()->to('/ppdb/pendaftaran');
+			return redirect()->to('/pendaftaran');
 		} else {
 
 			$validation = \Config\Services::validation();
-			return redirect()->to('/ppdb/pendaftaran')->withInput()->with('validation',$validation);
+			return redirect()->to('/pendaftaran')->withInput()->with('validation',$validation);
 		 }
 	}
 }

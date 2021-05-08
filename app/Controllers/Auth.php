@@ -71,4 +71,63 @@ class Auth extends BaseController
 		session()->setFlashdata('pesan', 'Logout Success');
 		return redirect()->to(base_url('auth/login'));
 	}
+
+	// login peserta
+	public function loginSiswa()
+	{
+		$data = [
+			'title' => 'PPDB Online',
+			'subtitle' => 'Login',
+			'validation' => \Config\Services::validation()
+		];
+		return view('v_login-siswa', $data);
+	}
+
+	public function cek_login_siswa()
+	{
+		if ($this->validate([
+			'nisn' => [
+				'label' => 'NISN',
+				'rules' => 'required',
+				'errors' => [
+					'required' => '{field} Wajib Diisi !!',
+				]
+			],
+			'password' => [
+				'label' => 'Password',
+				'rules' => 'required',
+				'errors' => [
+					'required' => '{field} Wajib Diisi !!',
+				],
+			]
+		])) {
+			//jika 
+			$nisn = $this->request->getPost('nisn');
+			$password = $this->request->getPost('password');
+			$cek_login = $this->ModelAuth->login_siswa($nisn, $password);
+			if ($cek_login) {
+				session()->set('id_siswa', $cek_login['id_siswa']);
+				session()->set('nisn', $cek_login['nisn']);
+				session()->set('nama_lengkap', $cek_login['nama_lengkap']);
+				session()->set('level', 'siswa');
+				return redirect()->to('/siswa');
+			}else {
+				session()->setFlashdata('pesan', 'NISN Atau Password Salah');
+			    return redirect()->to('/auth/loginSiswa');
+			}
+		}else {
+			
+			$validation = \Config\Services::validation();
+			return redirect()->to('/auth/loginSiswa')->withInput()->with('validation',$validation);
+		}
+	}
+
+	public function logout_siswa()
+	{
+		session()->remove('nisn');
+		session()->remove('nama_lengkap');
+		session()->remove('level');
+		session()->setFlashdata('pesan', 'Logout Success');
+		return redirect()->to('/auth/loginSiswa');
+	}
 }

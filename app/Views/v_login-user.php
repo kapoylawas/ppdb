@@ -48,6 +48,7 @@
               <span class="fas fa-envelope"></span>
             </div>
           </div>
+           
         </div>
         <div class="input-group mb-3">
           <input type="password" name="password" class="form-control" placeholder="Password">
@@ -56,6 +57,7 @@
               <span class="fas fa-lock"></span>
             </div>
           </div>
+    
         </div>
         <div class="row">
           <div class="col-8">

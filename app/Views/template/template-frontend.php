@@ -50,9 +50,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <li class="nav-item">
             <a href="<?= base_url('') ?>" class="nav-link">Pengumuman</a>
           </li>
-          <li class="nav-item">
-            <a href="<?= base_url('ppdb/pendaftaran') ?>" class="nav-link">Pendaftaran</a>
-          </li>
         </ul>
 
       </div>
@@ -61,12 +58,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
         <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown">
-          <a class="nav-link" href="<?= base_url('auth/login') ?>">
+        <?php if (session()->get('nisn') == "") { ?>
+         <a class="nav-link" href="<?= base_url('auth/loginSiswa') ?>">
             <i class="fas fa-user"></i> Login
           </a>
+        <?php }else { ?>
+             <li class="nav-item dropdown">
+              <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-user"></i> <?= session()->get('nama_lengkap') ?></a>
+              <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li><a href="#" class="dropdown-item"> Biodata</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a href="<?= base_url('auth/logout_siswa') ?>" class="dropdown-item"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a></li>
+            </ul>
+          </li>
+        <?php } ?>
+          
         </li>
         <!-- Notifications Dropdown Menu -->
-        
       </ul>
     </div>
   </nav>
@@ -149,12 +157,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     })
   })
 </script>
-<script>
-    window.setTimeout(function(){
-      $('.alert').fadeTo(500,0).slideUp(500,function(){
-        $(this).remove();
-      });
-    },8000);
-</script>
+
 </body>
 </html>

@@ -7,7 +7,7 @@
     </div>
 
 <div class="col-sm-8">
-<?php echo form_open('ppdb/simpanPendaftaran') ?>
+<?php echo form_open('pendaftaran/simpanPendaftaran') ?>
 <div class="card card-outline card-success">
        <div class="card-header">
          <h3 class="card-title">Pendaftaran</h3>
@@ -49,7 +49,19 @@
                 </div>
             </div>
 
-            <div class="col-sm-12">
+              <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <select name="jk" class="form-control">
+                     <option value="">--Pilih Jenis Kelamin--</option>
+                     <option value="L">Laki-Laki</option>
+                     <option value="P">Perempuan</option>
+                    </select>
+                    <p class="text-danger"><?= $validation->hasError('jk') ? $validation->getError('jk') : '' ?></p>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
               <div class="form-group">
                     <label>Tempat Lahir</label>
                     <input type="text" value="<?= old('tempat_lahir') ?>" name="tempat_lahir" class="form-control" placeholder="Tempat Lahir">
@@ -98,7 +110,7 @@
             </div>
          
             <div class="col-md-12 col-sm-12 col-12">
-                  <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i> Submit</button>
+                  <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-save"></i>  Submit</button>
             </div>
           </div>
         </div> 
