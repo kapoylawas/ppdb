@@ -17,11 +17,13 @@ class Pendaftaran extends BaseController
 	
 	public function index()
 	{
+		// $no_pendaftaran = $this->ModelSiswa->noPendaftaran();
 		$data = [
 			'title' => 'PPDB Online',
 			'subtitle' => 'Pendaftaran',
 			'ta' => $this->ModelTahun_ajaran->statusTa(),
-			'validation' => \Config\Services::validation()
+			// 'no_pendaftaran' => $no_pendaftaran,
+			'validation' => \Config\Services::validation(),
 		];
 		return view('v_pendaftaran', $data);
 	}
@@ -94,8 +96,11 @@ class Pendaftaran extends BaseController
 			$bulan = $this->request->getPost('bulan');
 			$tanggal = $this->request->getPost('tanggal');
 			$nisn = $this->request->getPost('nisn');
-
+			$no_pendaftaran = $this->ModelSiswa->noPendaftaran();
+			
 			$data = [
+				'no_pendaftaran' => $no_pendaftaran,
+				'tgl_pendaftaran' => date('Y-m-d'),
 				'nisn' => $this->request->getPost('nisn'),
 				'nama_lengkap' => $this->request->getPost('nama_lengkap'),
 				'nama_panggilan' => $this->request->getPost('nama_panggilan'),

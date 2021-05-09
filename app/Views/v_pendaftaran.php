@@ -7,7 +7,8 @@
     </div>
 
 <div class="col-sm-8">
-<?php echo form_open('pendaftaran/simpanPendaftaran') ?>
+<?php echo form_open('pendaftaran/simpanPendaftaran');
+?>
 <div class="card card-outline card-success">
        <div class="card-header">
          <h3 class="card-title">Pendaftaran</h3>
@@ -71,7 +72,7 @@
 
             <div class="col-sm-4">
                 <div class="form-group">
-                   <label>Tanggal</label>
+                   <label>Tanggal Lahir</label>
                     <select name="tanggal" class="form-control select2bs4" style="width: 100%;">
                          <option value="">--Tanggal--</option>
                            <?php
@@ -84,7 +85,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
-                    <label>Bulan</label>
+                    <label>Bulan Lahir</label>
                     <select name="bulan" class="form-control select2bs4" style="width: 100%;">
                          <option value="">--Bulan--</option>
                            <?php
@@ -97,7 +98,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
-                    <label>Tahun</label>
+                    <label>Tahun Lahir</label>
                     <select name="tahun" class="form-control select2bs4" style="width: 100%;">
                         <option value="">--Tahun--</option>
                         <?php $now = date('Y');

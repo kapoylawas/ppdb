@@ -5,7 +5,7 @@
 <img class="img-fluid pad" src="<?= base_url('logo/login.svg') ?>" alt="">
 </div>
 
-<div class="col-sm-7">
+<div class="col-sm-6">
 <?php echo form_open('Auth/cek_login_siswa') ?>
 <div class="card card-outline card-success">
      <div class="card-header text-center">
