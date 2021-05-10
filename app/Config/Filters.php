@@ -65,6 +65,7 @@ class Filters extends BaseConfig
 					'penghasilan', 'penghasilan/*',
 					'tahun_ajaran', 'tahun_ajaran/*',
 					'jurusan', 'jurusan/*',
+					'banner', 'banner/*',
 				]],
 			'FilterSiswa' => [
 				'except' => [

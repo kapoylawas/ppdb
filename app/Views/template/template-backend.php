@@ -146,18 +146,36 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
           </li>
         </ul>
-        <li class="nav-item">
-            <a href="<?= base_url('tahun_ajaran') ?>" class="nav-link">
-              <i class="nav-icon fas fa-calendar-alt"></i>
-              <p> Tahun Ajaran </p>
-            </a>
-          </li>
-         <li class="nav-item">
-                  <a href="<?= base_url('admin/setting') ?>" class="nav-link">
-                    <i class="nav-icon fas fa-cog"></i>
-                    <p> Setting </p>
+         <li class="nav-item menu-open">
+            <!-- <ul class="nav nav-treeview"> -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-cog nav-icon"></i>
+                  <p>
+                    Setup
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="<?= base_url('tahun_ajaran') ?>" class="nav-link">
+                    <i class="nav-icon fas fa-calendar-alt"></i>
+                    <p> Tahun Ajaran </p>
                   </a>
-            </li>
+                </li>
+                <li class="nav-item">
+                          <a href="<?= base_url('admin/setting') ?>" class="nav-link">
+                            <i class="nav-icon fas fa-cog"></i>
+                            <p> Setting </p>
+                          </a>
+                    </li>
+                <li class="nav-item">
+                          <a href="<?= base_url('banner') ?>" class="nav-link">
+                            <i class="nav-icon fas fa-cog"></i>
+                            <p> Setting Banner </p>
+                          </a>
+                    </li>
+          </li>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

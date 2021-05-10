@@ -6,21 +6,24 @@
               <!-- /.card-header -->
               
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  
                   <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <?php $no_a = 1; foreach ($banner as $key => $value) { 
+                     $a = $no_a;  
+                  ?>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="<?= $no_a++ ?>" class="<?= ($a == 1) ? 'active' : '' ?>"></li>
+                  <?php } ?>
+                    
                   </ol>
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" height="350px" src="<?= base_url('ppdb/ppdb6.jpg') ?>" alt="First slide">
+
+                  <?php $no_b = 1; foreach ($banner as $key => $value) { 
+                    $b = $no_b; ?>
+                    <div class="carousel-item <?= ($b == 1) ? 'active' : '' ?>">
+                      <img class="d-block w-100" height="350px" src="<?= base_url('ppdb_banner/' . $value['banner']) ?>" alt="<?= $no_b++ ?>">
                     </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" height="350px" src="<?= base_url('ppdb/ppdb2.jpg') ?>" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" height="350px" src="<?= base_url('ppdb/ppdb3.jpg') ?>" alt="Third slide">
-                    </div>
+                  <?php } ?>
+
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-custom-icon" aria-hidden="true">
