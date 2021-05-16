@@ -170,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </a>
                     </li>
                 <li class="nav-item">
-                          <a href="<?= base_url('banner') ?>" class="nav-link">
+                          <a href="<?= base_url('baner') ?>" class="nav-link">
                             <i class="nav-icon fas fa-cog"></i>
                             <p> Setting Banner </p>
                           </a>

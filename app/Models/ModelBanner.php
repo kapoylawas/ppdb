@@ -32,4 +32,12 @@ class ModelBanner extends Model
 		     ->where('id_banner', $data['id_banner'])
 			 ->delete($data);
 	}
+
+	public function detailBanner($id_banner)
+	{
+		return $this->db->table('tbl_banner')
+		 ->where('id_banner', $id_banner)
+		 ->get()
+		 ->getRowArray();
+	}
 }

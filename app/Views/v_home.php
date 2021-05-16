@@ -50,7 +50,7 @@
             <div class="timeline">
               <!-- timeline time label -->
               <div class="time-label">
-                <span class="bg-red">Estimasi Pendaftaran</span>
+                <span class="bg-red"><i class="fas fa-calendar-alt"></i> Estimasi Pendaftaran</span>
               </div>
               <!-- /.timeline-label -->
               <!-- timeline item -->
