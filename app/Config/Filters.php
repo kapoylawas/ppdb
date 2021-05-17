@@ -66,6 +66,7 @@ class Filters extends BaseConfig
 					'tahun_ajaran', 'tahun_ajaran/*',
 					'jurusan', 'jurusan/*',
 					'baner', 'baner/*',
+					'jalur', 'jalur/*',
 				]],
 			'FilterSiswa' => [
 				'except' => [

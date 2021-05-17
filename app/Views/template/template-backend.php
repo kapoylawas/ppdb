@@ -175,6 +175,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <p> Setting Banner </p>
                           </a>
                     </li>
+                <li class="nav-item">
+                          <a href="<?= base_url('jalur') ?>" class="nav-link">
+                            <i class="nav-icon fas fa-sitemap"></i>
+                            <p> Jalur Masuk </p>
+                          </a>
+                    </li>
           </li>
       </nav>
       <!-- /.sidebar-menu -->
