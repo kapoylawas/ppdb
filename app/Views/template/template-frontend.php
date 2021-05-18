@@ -64,9 +64,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
         <?php }else { ?>
              <li class="nav-item dropdown">
-              <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-user"></i> <?= session()->get('nama_lengkap') ?></a>
+              <a id="dropdownSubMenu1" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-user"></i> <?= session()->get('nama_lengkap') ?></a>
               <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <li><a href="#" class="dropdown-item"> Biodata</a></li>
+              <li><a href="<?= base_url('siswa') ?>" class="dropdown-item"> Biodata</a></li>
               <li class="dropdown-divider"></li>
               <li><a href="<?= base_url('auth/logout_siswa') ?>" class="dropdown-item"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a></li>
             </ul>
