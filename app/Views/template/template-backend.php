@@ -25,6 +25,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Select2 -->
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/summernote/summernote-bs4.min.css">
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -180,7 +182,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <i class="nav-icon fas fa-sitemap"></i>
                             <p> Jalur Masuk </p>
                           </a>
-                    </li>
+                  </li>
+                <li class="nav-item">
+                          <a href="<?= base_url('admin/beranda') ?>" class="nav-link">
+                            <i class="nav-icon fas fa-newspaper"></i>
+                            <p> Set Beranda </p>
+                          </a>
+                  </li>
           </li>
       </nav>
       <!-- /.sidebar-menu -->
@@ -278,6 +286,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url() ?>/template/plugins/sweetalert2/sweetalert2.min.js"></script>
 <!-- Select2 -->
 <script src="<?= base_url() ?>/template/plugins/select2/js/select2.full.min.js"></script>
+<!-- Summernote -->
+<script src="<?= base_url() ?>/template/plugins/summernote/summernote-bs4.min.js"></script>
 </body>
 <script>
     window.setTimeout(function(){
@@ -347,6 +357,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
     $('.select2bs4').select2({
       theme: 'bootstrap4'
     })
+  })
+</script>
+
+<script>
+  $(function () {
+    // Summernote
+    $('#summernote').summernote()
+
+    // CodeMirror
+    // CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+    //   mode: "htmlmixed",
+    //   theme: "monokai"
+    // });
   })
 </script>
 

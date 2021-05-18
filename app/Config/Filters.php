@@ -53,6 +53,7 @@ class Filters extends BaseConfig
 		'after'  => [
 			'FilterUser' => [
 				'except' => [
+					'auth', 'auth/*',
 					'home','home/*',
 					'/',
 					'ppdb', 'ppdb/*',
@@ -70,6 +71,7 @@ class Filters extends BaseConfig
 				]],
 			'FilterSiswa' => [
 				'except' => [
+					'auth', 'auth/*',
 					'home','home/*',
 					'/',
 					'ppdb', 'ppdb/*',

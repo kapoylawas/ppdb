@@ -73,4 +73,24 @@ class Admin extends BaseController
 		session()->setFlashdata('pesan', 'Data identitas sekolah berhasil di update !');
 		return redirect()->to('/admin/setting');
 	}
+
+	public function beranda()
+	{
+		$data = [
+			'title' => 'PPDB Online',
+			'subtitle' => 'Beranda',
+			'beranda' => $this->ModelAdmin->detailSetting(),
+		];
+		return view('admin/beranda/v_beranda', $data);
+	}
+
+	public function saveBeranda()
+	{
+		$data = [
+			'beranda' => $this->request->getPost('beranda'),
+		];
+		$this->ModelAdmin->saveSetting($data);
+		session()->setFlashdata('pesan', 'Data Beranda berhasil di update !');
+		return redirect()->to('/admin/beranda/v_beranda');
+	}
 }

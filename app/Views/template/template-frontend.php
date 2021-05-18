@@ -48,7 +48,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="<?= base_url('') ?>" class="nav-link">Pengumuman</a>
+            <a href="<?= base_url('') ?>" class="nav-link">Petunjuk</a>
           </li>
         </ul>
 

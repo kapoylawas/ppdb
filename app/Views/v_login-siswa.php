@@ -56,7 +56,7 @@
                 </div>
         </div> 
      </div>
-<?php echo form_close() ?>
+ <?php echo form_close() ?>
 </div>
 <!-- jQuery -->
 <script src="<?= base_url() ?>/template/plugins/jquery/jquery.min.js"></script>
