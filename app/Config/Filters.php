@@ -68,10 +68,11 @@ class Filters extends BaseConfig
 					'jurusan', 'jurusan/*',
 					'baner', 'baner/*',
 					'jalur', 'jalur/*',
+					'lampiran', 'lampiran/*',
 				]],
 			'FilterSiswa' => [
 				'except' => [
-					'auth', 'auth/*',
+					// 'auth', 'auth/*',
 					'home','home/*',
 					'/',
 					'ppdb', 'ppdb/*',
