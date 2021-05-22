@@ -14,9 +14,26 @@ class ModelSiswa extends Model
 		 ->getResultArray();
 	}
 
+	public function detailData($id_siswa)
+	{
+		return $this->db->table('tbl_siswa')
+		 ->where('id_siswa', $id_siswa)
+		 ->get()
+		 ->getRowArray();
+	}
+
 	public function insertData($data)
 	{
 		$this->db->table('tbl_siswa')->insert($data);
+	}
+
+	public function getBiodataSiswa()
+	{
+		return $this->db->table('tbl_siswa')
+		 ->join('tbl_jalur_masuk', 'tbl_jalur_masuk.id_jalur_masuk = tbl_siswa.id_jalur_masuk', 'left')
+		 ->where('id_siswa', session()->get('id_siswa'))
+		 ->get()
+		 ->getRowArray();
 	}
 
 	public function editData($data)
@@ -55,4 +72,5 @@ class ModelSiswa extends Model
 		$no_pendaftaran = $tgl . $batas;
 		return $no_pendaftaran;
 	}
+	
 }

@@ -20,6 +20,13 @@
                         <h5><i class="icon fas fa-exclamation-triangle"></i> Pemberitahuan!</h5>
                          Lengkapi Terlebih Dahulu Biodata anda Sebelum Melakukan APPLY Pendaftaran !!
                     </div>
+                                    <?php $error = session()->getFlashdata('errors');
+                                        if (session()->getFlashdata('pesan_edit')) {
+                                        echo '<div class="alert alert-success">';
+                                        echo session()->getFlashdata('pesan_edit');
+                                        echo '</div>';
+                                        } 
+                                    ?>
                 <div class="row">
                  <div class="col-sm-12">
                             <br>
@@ -28,44 +35,41 @@
                                     <h3 class="card-title">Pendaftaran</h3>
                                     <div class="card-tools">
 
-                                    <button type="button" class="btn btn-primary btn-xs">
-                                    <i class="fas fa-save"></i> Save</button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    
+                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editpendaftaran">
+                                    <i class="fas fa-save"></i> </button>
                                     </div>
                                     <!-- /.card-tools -->
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                   <div class="row">
+                                   
                                         <div class="col-sm-3">
                                                 <strong><i class="fas fa-book mr-1"></i> NISN</strong>
                                                 <p class="text-muted">
-                                                B.S. in Computer
+                                                <?= $siswa['nisn'] ?>
                                                 </p>
                                                 <hr>
                                         </div>
                                         <div class="col-sm-3">
                                                 <strong><i class="fas fa-book mr-1"></i> No Pendaftaran</strong>
                                                 <p class="text-muted">
-                                                B.S. in Computer
+                                                <?= $siswa['no_pendaftaran'] ?>
                                                 </p>
                                                 <hr>
                                         </div>
                                         <div class="col-sm-3">
                                                 <strong><i class="fas fa-book mr-1"></i> Tanggal Pendaftaran</strong>
                                                 <p class="text-muted">
-                                                B.S. in Computer
+                                                <?= $siswa['tgl_pendaftaran'] ?>
                                                 </p>
                                                 <hr>
                                         </div>
                                         <div class="col-sm-3">
                                                 <strong><i class="fas fa-book mr-1"></i> Jalur Pendaftaran</strong>
-                                                <p class="text-muted">
-                                                B.S. in Computer
-                                                </p>
-                                                <hr>
+                                                <?= ($siswa['jalur_masuk']==null) ? '<p class="text-danger">WAJIB DIISI</p>' : '<p class="text-muted"> '.$siswa['jalur_masuk'].' </p>' ?>
+                                                
+                                              <hr>
                                         </div>
                                   </div>
                                 </div>
@@ -79,8 +83,6 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Foto Siswa</h3>
                                     <div class="card-tools">
-                                    <button type="button" class="btn btn-primary btn-xs">
-                                    <i class="fas fa-save"></i> Save</button>
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                         <i class="fas fa-minus"></i>
                                     </button>
@@ -90,14 +92,17 @@
                                 <!-- /.card-header -->
                                 <div class="card-body">
                                         <div class="text-center">
-                                            <img class="img-fluid pad" src="<?= base_url('foto/logo.png') ?>" alt="User profile picture" width="150px"> 
+                                                <?php if ($siswa['foto'] == null) { ?>
+                                                    <img class="img-fluid pad" src="<?= base_url('foto/blank.png') ?>" alt="User profile picture" width="150px"> 
+                                                <?php }else { ?>
+                                                    <img class="img-fluid pad" src="<?= base_url('foto/' . $siswa['foto']) ?>" alt="User profile picture" width="150px">
+                                                <?php } ?>
+                                            <br>
+                                            <p class="text-danger"><?= $validation->hasError('foto') ? $validation->getError('foto') : '' ?></p>
                                         </div>
-                                        <ul class="list-group list-group-unbordered mb-3">
-                                                <li class="list-group-item">
-                                                    <b>No Ijazah</b> <a class="float-right">212121543</a>
-                                                </li>
-                                        </ul>
-                                    <a href="" class="btn btn-sm btn-primary btn-block"><i class="fas fa-pencil"></i> Ganti Foto</a>
+                                        <br>
+                                    <button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="modal" data-target="#foto">
+                                    <i class="fas fa-save"></i> Ganti Foto</button>
                                 </div>
                                 <!-- /.card-body -->
                          </div>
@@ -165,7 +170,11 @@
                                             <strong><i class="fas fa-book mr-1"></i> Berat Badan</strong>
                                             <p class="text-muted">Malibu, California</p>
                                             <hr>
-                                            
+                                            <strong><i class="fas fa-book mr-1"></i> Jumlah Saudara</strong>
+                                            <p class="text-muted">Malibu, California</p>
+                                            <hr>
+                                            <strong><i class="fas fa-book mr-1"></i> Anak Ke</strong>
+                                            <p class="text-muted">Malibu, California</p>    
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +235,9 @@
                                 <!-- /.card-body -->
                          </div>
 
-                     <div class="col-sm-12">
+                      
+
+                      <div class="col-sm-12">
                             <br>
                          <div class="card card-outline card-success">
                                 <div class="card-header">
@@ -277,8 +288,47 @@
                                 </div>
                                 <!-- /.card-body -->
                            </div>
-                        </div>
+                      </div>
 
+                        <div class="col-sm-12">
+                                <br>
+                            <div class="card card-outline card-success">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Alamat Lengkap</h3>
+                                        <div class="card-tools">
+                                        <button type="button" class="btn btn-primary btn-xs">
+                                        <i class="fas fa-save"></i> Save</button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        </div>
+                                        <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <strong><i class="fas fa-book mr-1"></i> Provinsi</strong>
+                                                <p class="text-muted">
+                                                B.S. in Computer
+                                                </p>
+                                                <strong><i class="far fa-file-alt mr-1"></i> Kabupaten</strong>
+                                                <p class="text-muted">Lorem ipsum dolor sit amet</p>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <strong><i class="far fa-file-alt mr-1"></i> Kecamatan</strong>
+                                                <p class="text-muted">Lorem ipsum dolor sit amet,</p>
+                                                <strong><i class="far fa-file-alt mr-1"></i> Alamat</strong>
+                                                <p class="text-muted">Lorem ipsum dolor sit amet,</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /.card-body -->
+                            </div>
+                        </div>
+                                                   
                      <div class="col-sm-12">
                             <br>
                          <div class="card card-outline card-success">
@@ -383,5 +433,94 @@
       </div>
   </div>
 </div>
+
+<!-- modal pendaftaran -->
+<div class="modal fade" id="editpendaftaran">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Pendaftaran</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <?php echo form_open('siswa/updatePendaftaran/'. $siswa['id_siswa']) ?>
+            <div class="modal-body">
+               <div class="form-group">
+                    <label>NISN</label>
+                    <input type="text" class="form-control" value="<?= $siswa['nisn'] ?>" readonly>
+                 </div>
+               <div class="form-group">
+                    <label>No Pendaftaran</label>
+                    <input type="text" class="form-control" value="<?= $siswa['no_pendaftaran'] ?>"readonly>
+                 </div>
+               <div class="form-group">
+                    <label>Tanggal Pendaftaran</label>
+                    <input type="text" class="form-control" value="<?= $siswa['tgl_pendaftaran'] ?>"readonly>
+                 </div>
+               <div class="form-group">
+                    <label>Jalur Masuk</label>
+                    <select name="id_jalur_masuk" class="form-control" id="">
+                        <option value="">--Pilih JalurMasuk</option>
+                        <?php foreach ($jalur as $key => $value) { ?>
+                            <option value="<?= $value['id_jalur_masuk'] ?>" <?= $siswa['id_jalur_masuk']==$value['id_jalur_masuk'] ? 'selected' : '' ?>>
+                            <?= $value['jalur_masuk'] ?>
+                        </option>
+                        <?php } ?>
+                    </select>
+                 </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+            </div>
+            <?php echo form_close() ?>
+
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
+
+<!-- modal foto -->
+<div class="modal fade" id="foto">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Foto (Max Foto 1mb)</h4> 
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <?php echo form_open_multipart('siswa/updateFoto/'. $siswa['id_siswa']) ?>
+            <div class="modal-body">
+               <div class="form-group">
+                    <label>Ganti Foto</label>
+                    <input type="file" id="preview_gambar" class="form-control" name="foto" accept="image/*" required>
+                 </div>
+               <div class="form-group">
+                    <label>Preview Foto</label> <br>
+                    <?php if ($siswa['foto'] == null) { ?>
+                        <img src="<?= base_url('foto/blank.png') ?>" id="gambar_load" width="120px" height="120px">
+                    <?php }else { ?>
+                        <img src="<?= base_url('foto/' . $siswa['foto']) ?>" id="gambar_load" width="130px" height="130px">
+                    <?php } ?>
+                    
+                 </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+            </div>
+            <?php echo form_close() ?>
+
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
 
 <?= $this->endSection() ?>
