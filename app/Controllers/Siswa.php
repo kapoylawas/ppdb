@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\ModelSiswa;
 use App\Models\ModelJalur;
+use App\Models\ModelAgama;
 
 
 class Siswa extends BaseController
@@ -13,6 +14,7 @@ class Siswa extends BaseController
 	{
 		$this->ModelSiswa = new ModelSiswa();
 		$this->ModelJalur = new ModelJalur();
+		$this->ModelAgama = new ModelAgama();
 		helper('form');
 	}
 
@@ -23,6 +25,7 @@ class Siswa extends BaseController
 			'subtitle' => 'Siswa',
 			'siswa' => $this->ModelSiswa->getBiodataSiswa(),
 			'jalur' => $this->ModelJalur->getAllData(),
+			'agama' => $this->ModelAgama->getAllData(),
 			'validation' => \Config\Services::validation(),
 		];
 		return view('siswa/v_siswa', $data);

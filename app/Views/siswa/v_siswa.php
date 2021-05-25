@@ -66,9 +66,8 @@
                                                 <hr>
                                         </div>
                                         <div class="col-sm-3">
-                                                <strong><i class="fas fa-book mr-1"></i> Jalur Pendaftaran</strong>
+                                                <strong><i class="fas fa-book mr-1"></i> Jalur Masuk</strong>
                                                 <?= ($siswa['jalur_masuk']==null) ? '<p class="text-danger">WAJIB DIISI</p>' : '<p class="text-muted"> '.$siswa['jalur_masuk'].' </p>' ?>
-                                                
                                               <hr>
                                         </div>
                                   </div>
@@ -114,8 +113,8 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Identitas Peserta Didik</h3>
                                     <div class="card-tools">
-                                     <button type="button" class="btn btn-primary btn-xs">
-                                    <i class="fas fa-save"></i> Save</button>
+                                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#siswa">
+                                    <i class="fas fa-save"></i> </button>
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                         <i class="fas fa-minus"></i>
                                     </button>
@@ -128,53 +127,48 @@
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <strong><i class="fas fa-book mr-1"></i> Nama Lengkap</strong>
-                                            <p class="text-muted">
-                                            B.S. in Computer
-                                            </p>
+                                            <?= ($siswa['nama_lengkap']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['nama_lengkap'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> Tempat Lahir</strong>
-                                            <p class="text-muted">Malibu, California</p>
+                                            <?= ($siswa['tempat_lahir']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['tempat_lahir'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> NIK</strong>
-                                            <p class="text-muted">
-                                            <span class="tag tag-danger">UI Design</span>
-                                            </p>
+                                            <?= ($siswa['nik']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['nik'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> Agama</strong>
-                                            <p class="text-muted">Lorem ipsum dolor sit amet</p>
+                                            <?= ($siswa['agama']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['agama'].' </p>' ?>
                                         </div>
 
                                         <div class="col-sm-4">
                                             <strong><i class="fas fa-book mr-1"></i> Nama Panggilan</strong>
-                                            <p class="text-muted">
-                                            B.S. in Computer
-                                            </p>
+                                            <?= ($siswa['nama_panggilan']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['nama_panggilan'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> Tanggal Lahir</strong>
-                                            <p class="text-muted">Malibu, California</p>
+                                            <?= ($siswa['tgl_lahir']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['tgl_lahir'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> Jenis Kelamin</strong>
-                                            <p class="text-muted">
-                                            <span class="tag tag-danger">UI Design</span>
-                                            </p>
+                                            <?php if ($siswa['jk'] == 'P') {
+                                                $jk= 'Perempuan';
+                                            }elseif ($siswa['jk'] == 'L' ) {
+                                                $jk= 'Laki-Laki';
+                                            } ?>
+                                            <?= ($siswa['jk']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$jk.' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> No Telpon</strong>
-                                            <p class="text-muted">Lorem ipsum dolor </p>
+                                            <?= ($siswa['no_telpon']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['no_telpon'].' </p>' ?>
                                         </div>
                                         <div class="col-sm-4">
                                             <strong><i class="fas fa-book mr-1"></i> Tinggi Badan</strong>
-                                            <p class="text-muted">
-                                            B.S. in Computer
-                                            </p>
+                                            <?= ($siswa['tinggi']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['tinggi'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> Berat Badan</strong>
-                                            <p class="text-muted">Malibu, California</p>
+                                            <?= ($siswa['berat']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['berat'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> Jumlah Saudara</strong>
-                                            <p class="text-muted">Malibu, California</p>
+                                            <?= ($siswa['jml_saudara']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['jml_saudara'].' </p>' ?>
                                             <hr>
                                             <strong><i class="fas fa-book mr-1"></i> Anak Ke</strong>
-                                            <p class="text-muted">Malibu, California</p>    
+                                            <?= ($siswa['anak_ke']==null) ? '<p class="text-danger">Kosong</p>' : '<p class="text-muted"> '.$siswa['anak_ke'].' </p>' ?>    
                                         </div>
                                     </div>
                                 </div>
@@ -421,12 +415,9 @@
                                 <!-- /.card-body -->
                            </div>
                         </div>
-
                     <div class="col-sm-12">
                         <a href="" class="btn btn-success btn-flat btn-block"><i class="fa fa-check"></i> Apply Pendaftaran</a>
                     </div>
-
-
                 </div>
               </div>
               <!-- /.card-body -->
@@ -523,4 +514,99 @@
   </div>
 <!-- /.modal -->
 
+<!-- modal identitas -->
+<div class="modal fade" id="siswa">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Data Identitas Siswa</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <?php echo form_open('siswa/updateIdentitasSiswa/'. $siswa['id_siswa']) ?>
+            <div class="modal-body">
+                    <div class="row">
+                        
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Nama Lengkap</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['nama_lengkap'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Tempat Lahir</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['tempat_lahir'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>NIK</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['nik'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Agama</label>
+                                                <select name="id_agama" class="form-control" id="">
+                                                        <option value="">--Pilih Agama--</option>
+                                                    <?php foreach ($agama as $key => $value) {?>
+                                                        <option value="<?= $value['id_agama'] ?>" <?= $siswa['id_agama'] == $value['id_agama'] ? 'selected' : '' ?> ><?= $value['agama'] ?></option>
+                                                    <?php  } ?>
+                                                </select>
+                                            </div>
+                                        </div>    
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Nama Panggilan</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['nama_panggilan'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Tanggal Lahir</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['tgl_lahir'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Jenis Kelamin</label>
+                                                <select name="jk" class="form-control" id="">
+                                                    <option value="L"<?= $siswa['jk'] == 'L' ? 'selected' : '' ?>>Laki-Laki</option>
+                                                    <option value="P"<?= $siswa['jk'] == 'P' ? 'selected' : '' ?>>Perempuan</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>No Telpon</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['no_telpon'] ?>" required>
+                                            </div>
+                                        </div>    
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label>Nama Panggilan</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['nama_panggilan'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Tanggal lahir</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['tgl_lahir'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>NIK</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['nik'] ?>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Anak Ke</label>
+                                                <input type="text" class="form-control" value="<?= $siswa['anak_ke'] ?>" required>
+                                            </div>
+                                        </div>    
+    
+                                   
+                    </div>
+               
+               
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+            </div>
+            <?php echo form_close() ?>
+
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+<!-- /.modal -->
 <?= $this->endSection() ?>

@@ -31,6 +31,7 @@ class ModelSiswa extends Model
 	{
 		return $this->db->table('tbl_siswa')
 		 ->join('tbl_jalur_masuk', 'tbl_jalur_masuk.id_jalur_masuk = tbl_siswa.id_jalur_masuk', 'left')
+		 ->join('tbl_agama', 'tbl_agama.id_agama = tbl_siswa.id_agama', 'left')
 		 ->where('id_siswa', session()->get('id_siswa'))
 		 ->get()
 		 ->getRowArray();
